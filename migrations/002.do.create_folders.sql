@@ -3,6 +3,7 @@ CREATE TABLE folders(
     folder_name TEXT NOT NULL
 );
 
+
 ALTER TABLE notes
     ADD COLUMN
-        folders TEXT REFERENCES notes(id);
+    folder INTEGER REFERENCES folders(id) ON DELETE CASCADE  NOT NULL;
